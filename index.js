@@ -5,12 +5,20 @@ const Aluno = require('./models/alunoModelo')
 const PORT = process.env.PORT || 3000
 app.use(express.json())
 
-// respond with "hello world" when a GET request is made to the homepage
 app.get('/alunos', async function(req, res) {
-  const aluno = await Aluno.find({});
-  res.status(200).json(aluno);
-})
-
+    try {
+      const alunos = await Aluno.find({});
+  
+      const alunosString = alunos.map(aluno => {
+        return `Nome: ${aluno.nome} | Idade: ${aluno.idade} | Peso: ${aluno.peso} | Altura: ${aluno.altura}\n`;
+      }).join('<br>');
+      
+      res.status(200).send(alunosString);
+    } catch (error) {
+      res.status(500).json({ message: `Erro ao obter dados dos alunos: ${error.message}` });
+    }
+  });
+  
 app.post('/alunos', async(req,res) => {
 
     try {
