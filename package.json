@@ -4,7 +4,7 @@
   "description": "",
   "main": "calculoimc.js",
   "scripts": {
-    "start": "calculoimc.js",
+    "start": " node calculoimc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
