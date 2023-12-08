@@ -15,6 +15,6 @@ Tecnologias Utilizadas:
 - Axios
 - Insomnia
 
-Link da API de cadastro de alunos: https://treino-certo-renan-production.up.railway.app/alunos
-Link para obter os IMC's: https://treino-certo-renan-production-6e4c.up.railway.app/calcularimc
+Link da API de cadastro de alunos: https://treino-certo-renan-production.up.railway.app/alunos  
+Link para obter os IMC's: https://treino-certo-renan-production-6e4c.up.railway.app/calcularimc  
 Link do repositório no GitHub: https://github.com/renanamd/api-alunos
